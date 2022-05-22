@@ -26,7 +26,11 @@ interface Post {
   subtitle: string;
 }
 
-const POstsMappedBySections = {
+type Props = 'sports' | 'nutrition';
+
+type PostsRecord = Record<Props, Post[]>
+
+const POstsMappedBySections: PostsRecord = {
   sports: [
     {
       title: 'espanha',
